@@ -1,0 +1,121 @@
+getgenv().Hyperion = {
+	["Intro"] = true,
+    ["Script_Key"] ="Key";
+
+	["SilentAim"] = {
+		["Enabled"] = true,
+		["HitPart"] = "LowerTorso",
+		["Prediction"] = 0.14823756,
+		["AutoPred"] = false,
+
+		["ClosestPoint"] = false,
+		["ClosestPart"] = true,
+
+        ["Key"] = "U", -- Make sure its uppercase
+
+		["FieldOfView"] = {
+			["Visible"] = true,
+			["Color"] = Color3.fromRGB(255,255,255),
+			["Size"] = 150,
+			["Transparency"] = 1, -- 1 for fully visible, 0 for not visible. 
+			["Filled"] = false,
+		},
+
+		["Resolver"] = {
+			["Enabled"] = true,
+			["Method"] = "Special", -- Special, DeltaTime, MoveDirection, 0 Velocity note: 0 velocity and movedirection might break your prediction
+		},
+
+		["Airshot"] = {
+			["Enabled"] = true,
+			["AirPart"] = "UpperTorso",
+			["UseAirshotPrediction"] = true,
+			["AirPrediction"] = 0.14823756,
+			["UseJumpOffset"] = true,
+			["JumpOffset"] = 0.02,
+		},
+
+		["Visuals"] = {
+			["Tracer"] = {
+				["Enabled"] = false,
+				["Thickness"] = 1,
+				["Color"] = Color3.fromRGB(255,255,255)
+			},
+
+			["Chams"] = {
+				["Enabled"] = false,
+				["FillColor"] = Color3.fromRGB(255,255,255),
+				["OutlineColor"] = Color3.fromRGB(0,0,0),
+				["FillTransparency"] = 0, -- 0 for fully visible 1 for not visible
+				["OutlineTransparency"] = 0,
+				["ApplyTo"] = "Hit Part" -- Hit Part, Character
+			},
+
+			["Dot"] = {
+				["Enabled"] = false,
+				["Color"] = Color3.fromRGB(255,255,255),
+				["Size"] = 4,
+				["ApplyTo"] = "Hit Part" -- Hit Part, Character
+			}
+		},
+
+		["Checks"] = {
+			["Wall"] = true,
+			["Knocked"] = true,
+			["Grabbed"] = true,
+			["Friend"] = true,
+			["Death"] = true 
+		}
+	};
+	
+    ["AimAssist"] = {
+        ["Enabled"] = true,
+        ["HitPart"] = "Head",
+        ["Prediction"] = 0.14823756,
+        ["AutoPred"] = false,
+
+        ["ClosestPoint"] = false,
+        ["ClosestPart"] = true,
+
+        ["Key"] = "C", -- Make sure its uppercase
+
+        ["Resolver"] = {
+            ["Enabled"] = true,
+            ["Method"] = "Special" --Special, DeltaTime, MoveDirection, 0 Velocity note: 0 velocity and movedirection might break your prediction
+        },
+
+        ["Smoothness"] = {
+            ["Enabled"] = true, --// Smoothens the camera movement
+            ["SmoothingFactor"] = 0.0178825 --// Only numbers below 1, for example = 0.9135 --0.04518
+        },
+
+        ["Shake"] = {
+            ["Enabled"] = false,
+            ["UseAxisShake"] = false, --// Uses the specified X,Y,Z Shake values
+
+            ["Shaking"] = 1.9, --// Numbers below 1 wont work.
+
+            ["ShakeX"] = 1.2, --// The shaking value on the X axis
+            ["ShakeY"] = 1.31,--// The shaking value on the Y axis
+            ["ShakeZ"] = 1.456,--// The shaking value on the Z axis
+        },
+
+        ["Airshot"] = {
+            ["Enabled"] = true, 
+            ["HitPart"] = "UpperTorso", 
+            ["UseAirPrediction"] = true, 
+            ["AirPrediction"] = 0.14823756, 
+            ["UseJumpOffset"] = true, 
+            ["JumpOffset"] = 0.01 
+        },
+
+		["Checks"] = {
+			["Wall"] = false,
+			["Knocked"] = false,
+			["Grabbed"] = false,
+			["Friend"] = false,
+			["Death"] = false 
+		}
+    }
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/91794ae4412397a80daec3a0e53fde1b.lua"))()
