@@ -1,6 +1,8 @@
+script_key="KEY";
+getgenv().script_key = script_key;
+
 getgenv().Hyperion = {
 	["Intro"] = true,
-    ["Script_Key"] ="Key";
 
 	["SilentAim"] = {
 		["Enabled"] = true,
@@ -118,4 +120,4 @@ getgenv().Hyperion = {
 		}
     }
 }
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/91794ae4412397a80daec3a0e53fde1b.lua"))()
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e305923a73757eda4c844218b0d799e.lua"))()
