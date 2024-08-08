@@ -3,12 +3,13 @@ getgenv().script_key = script_key;
 
 getgenv().Hyperion = {
 	["Intro"] = true,
+    ["Interface"] = true,
 
 	["SilentAim"] = {
 		["Enabled"] = true,
 		["HitPart"] = "LowerTorso",
-		["Prediction"] = 0.14823756,
-		["AutoPred"] = false,
+		["Prediction"] = 0.13913,
+        ["HitChance"] = 100,
 
 		["ClosestPoint"] = false,
 		["ClosestPart"] = true,
@@ -24,28 +25,28 @@ getgenv().Hyperion = {
 		},
 
 		["Resolver"] = {
-			["Enabled"] = true,
+			["Enabled"] = false,
 			["Method"] = "Special", -- Special, DeltaTime, MoveDirection, 0 Velocity note: 0 velocity and movedirection might break your prediction
 		},
 
 		["Airshot"] = {
-			["Enabled"] = true,
+			["Enabled"] = false,
 			["AirPart"] = "UpperTorso",
-			["UseAirshotPrediction"] = true,
-			["AirPrediction"] = 0.14823756,
-			["UseJumpOffset"] = true,
-			["JumpOffset"] = 0.02,
+			["UseAirshotPrediction"] = false,
+			["AirPrediction"] = 0.1344,
+			["UseJumpOffset"] = false,
+			["JumpOffset"] = 0.06,
 		},
 
 		["Visuals"] = {
 			["Tracer"] = {
-				["Enabled"] = false,
+				["Enabled"] = true,
 				["Thickness"] = 1,
 				["Color"] = Color3.fromRGB(255,255,255)
 			},
 
 			["Chams"] = {
-				["Enabled"] = false,
+				["Enabled"] = true,
 				["FillColor"] = Color3.fromRGB(255,255,255),
 				["OutlineColor"] = Color3.fromRGB(0,0,0),
 				["FillTransparency"] = 0, -- 0 for fully visible 1 for not visible
@@ -54,7 +55,7 @@ getgenv().Hyperion = {
 			},
 
 			["Dot"] = {
-				["Enabled"] = false,
+				["Enabled"] = true,
 				["Color"] = Color3.fromRGB(255,255,255),
 				["Size"] = 4,
 				["ApplyTo"] = "Hit Part" -- Hit Part, Character
@@ -62,33 +63,47 @@ getgenv().Hyperion = {
 		},
 
 		["Checks"] = {
-			["Wall"] = true,
-			["Knocked"] = true,
-			["Grabbed"] = true,
-			["Friend"] = true,
-			["Death"] = true 
-		}
+			["Wall"] = false,
+			["Knocked"] = false,
+			["Grabbed"] = false,
+			["Friend"] = false,
+			["Death"] = false 
+		},
+
+        ["AutoPred"] = {
+            ["Enabled"] = false,
+            ["20"] = 0.1126,
+            ["30"] = 0.1156,
+            ["40"] = 0.1200,
+            ["50"] = 0.1247,
+            ["60"] = 0.1284,
+            ["70"] = 0.1303,
+            ["80"] = 0.1333,
+            ["90"] = 0.1353,
+            ["100"] = 0.1383,
+            ["110"] = 0.1405,
+            ["120"] = 0.1437
+        }
 	};
 	
     ["AimAssist"] = {
         ["Enabled"] = true,
         ["HitPart"] = "Head",
-        ["Prediction"] = 0.14823756,
-        ["AutoPred"] = false,
+        ["Prediction"] = 0.1093,
 
         ["ClosestPoint"] = false,
-        ["ClosestPart"] = true,
+        ["ClosestPart"] = false,
 
         ["Key"] = "C", -- Make sure its uppercase
 
         ["Resolver"] = {
-            ["Enabled"] = true,
+            ["Enabled"] = false,
             ["Method"] = "Special" --Special, DeltaTime, MoveDirection, 0 Velocity note: 0 velocity and movedirection might break your prediction
         },
 
         ["Smoothness"] = {
             ["Enabled"] = true, --// Smoothens the camera movement
-            ["SmoothingFactor"] = 0.0178825 --// Only numbers below 1, for example = 0.9135 --0.04518
+            ["SmoothingFactor"] = 0.04518 --// Only numbers below 1, for example = 0.9135
         },
 
         ["Shake"] = {
@@ -103,12 +118,12 @@ getgenv().Hyperion = {
         },
 
         ["Airshot"] = {
-            ["Enabled"] = true, 
+            ["Enabled"] = false, 
             ["HitPart"] = "UpperTorso", 
-            ["UseAirPrediction"] = true, 
-            ["AirPrediction"] = 0.14823756, 
+            ["UseAirPrediction"] = false, 
+            ["AirPrediction"] = 0.1291, 
             ["UseJumpOffset"] = true, 
-            ["JumpOffset"] = 0.01 
+            ["JumpOffset"] = 0.065 
         },
 
 		["Checks"] = {
@@ -117,7 +132,22 @@ getgenv().Hyperion = {
 			["Grabbed"] = false,
 			["Friend"] = false,
 			["Death"] = false 
-		}
+		},
+
+        ["AutoPred"] = {
+            ["Enabled"] = false,
+            ["20"] = 0.1126,
+            ["30"] = 0.1156,
+            ["40"] = 0.1200,
+            ["50"] = 0.1247,
+            ["60"] = 0.1284,
+            ["70"] = 0.1303,
+            ["80"] = 0.1333,
+            ["90"] = 0.1353,
+            ["100"] = 0.1383,
+            ["110"] = 0.1405,
+            ["120"] = 0.1437
+        }
     }
 }
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e305923a73757eda4c844218b0d799e.lua"))()
