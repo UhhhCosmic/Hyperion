@@ -12,8 +12,8 @@ getgenv().Hyperion = {
                 ["HitChance"] = 100,
                 ["Autos"] = true,
 
-		["ClosestPoint"] = false,
-		["ClosestPart"] = true,
+	["ClosestPoint"] = false,
+	["ClosestPart"] = true,
 
         ["Key"] = "U", -- Make sure its uppercase
 
