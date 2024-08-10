@@ -9,7 +9,8 @@ getgenv().Hyperion = {
 		["Enabled"] = true,
 		["HitPart"] = "LowerTorso",
 		["Prediction"] = 0.13913,
-        ["HitChance"] = 100,
+                ["HitChance"] = 100,
+                ["Autos"] = true,
 
 		["ClosestPoint"] = false,
 		["ClosestPart"] = true,
